@@ -1,0 +1,130 @@
+.simulator-page .sim-layout {
+  display: grid;
+  grid-template-columns: 320px 1fr;
+  gap: var(--space-xl);
+  margin-bottom: var(--space-3xl);
+}
+
+.sim-controls {
+  padding: var(--space-xl);
+  height: fit-content;
+  position: sticky;
+  top: 90px;
+}
+
+.sim-controls h3 {
+  margin-bottom: var(--space-lg);
+  color: var(--text-primary);
+}
+
+.mode-toggle {
+  display: flex;
+  gap: var(--space-xs);
+  margin-bottom: var(--space-lg);
+  padding: 3px;
+  background: var(--bg-tertiary);
+  border-radius: var(--radius-sm);
+}
+
+.mode-btn {
+  flex: 1;
+  padding: var(--space-sm) var(--space-md);
+  border: none;
+  border-radius: var(--radius-sm);
+  background: transparent;
+  color: var(--text-secondary);
+  font-size: 0.8rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all var(--transition-fast);
+  font-family: var(--font-primary);
+}
+
+.mode-btn.active {
+  background: var(--gradient-primary);
+  color: white;
+}
+
+.control-fields {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-lg);
+  margin-bottom: var(--space-xl);
+}
+
+.control-fields input[type="range"] {
+  width: 100%;
+  accent-color: var(--accent-cyan);
+  background: var(--bg-tertiary);
+  height: 4px;
+  border-radius: 2px;
+  -webkit-appearance: none;
+}
+
+.control-fields input[type="range"]::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  background: var(--accent-cyan);
+  cursor: pointer;
+  box-shadow: 0 0 8px rgba(0, 212, 255, 0.4);
+}
+
+.range-value {
+  font-family: var(--font-mono);
+  font-size: 0.85rem;
+  color: var(--accent-cyan);
+  font-weight: 600;
+}
+
+.run-btn {
+  width: 100%;
+}
+
+.error-msg {
+  margin-top: var(--space-md);
+  padding: var(--space-md);
+  background: rgba(255, 71, 87, 0.1);
+  border: 1px solid rgba(255, 71, 87, 0.3);
+  border-radius: var(--radius-sm);
+  color: var(--accent-red);
+  font-size: 0.85rem;
+}
+
+.sim-visual {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--space-lg);
+}
+
+.playback-controls {
+  display: flex;
+  align-items: center;
+  gap: var(--space-md);
+}
+
+.step-counter {
+  font-family: var(--font-mono);
+  font-size: 0.85rem;
+  color: var(--text-muted);
+}
+
+.sim-metrics {
+  margin-top: var(--space-xl);
+}
+
+.sim-metrics h3 {
+  margin-bottom: var(--space-xl);
+  text-align: center;
+}
+
+@media (max-width: 1024px) {
+  .simulator-page .sim-layout {
+    grid-template-columns: 1fr;
+  }
+  .sim-controls {
+    position: static;
+  }
+}

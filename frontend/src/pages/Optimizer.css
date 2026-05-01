@@ -1,0 +1,128 @@
+.optimizer-page .opt-layout {
+  display: grid;
+  grid-template-columns: 360px 1fr;
+  gap: var(--space-xl);
+}
+
+.opt-config {
+  padding: var(--space-xl);
+  height: fit-content;
+  position: sticky;
+  top: 90px;
+}
+
+.opt-config h3 {
+  margin-bottom: var(--space-lg);
+}
+
+.config-grid {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-md);
+  margin-bottom: var(--space-xl);
+}
+
+.range-row {
+  display: flex;
+  align-items: center;
+  gap: var(--space-md);
+}
+
+.range-row input[type="range"] {
+  flex: 1;
+  accent-color: var(--accent-cyan);
+  -webkit-appearance: none;
+  height: 4px;
+  background: var(--bg-tertiary);
+  border-radius: 2px;
+}
+
+.range-row input[type="range"]::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  background: var(--accent-cyan);
+  cursor: pointer;
+}
+
+.range-value {
+  font-family: var(--font-mono);
+  font-size: 0.85rem;
+  color: var(--accent-cyan);
+  font-weight: 600;
+  min-width: 45px;
+  text-align: right;
+}
+
+.run-btn {
+  width: 100%;
+}
+
+.error-msg {
+  margin-top: var(--space-md);
+  padding: var(--space-md);
+  background: rgba(255, 71, 87, 0.1);
+  border: 1px solid rgba(255, 71, 87, 0.3);
+  border-radius: var(--radius-sm);
+  color: var(--accent-red);
+  font-size: 0.85rem;
+}
+
+.opt-summary {
+  margin-top: var(--space-lg);
+  text-align: center;
+}
+
+.summary-time {
+  color: var(--accent-green);
+  font-size: 0.9rem;
+}
+
+.opt-results {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-xl);
+}
+
+.opt-loading {
+  padding: var(--space-3xl);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--space-md);
+}
+
+.charts-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: var(--space-xl);
+}
+
+.best-plan {
+  padding: var(--space-xl);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--space-lg);
+}
+
+.best-plan h3 {
+  color: var(--text-primary);
+}
+
+.best-plan p {
+  font-size: 0.9rem;
+}
+
+@media (max-width: 1024px) {
+  .optimizer-page .opt-layout {
+    grid-template-columns: 1fr;
+  }
+  .opt-config {
+    position: static;
+  }
+  .charts-grid {
+    grid-template-columns: 1fr;
+  }
+}

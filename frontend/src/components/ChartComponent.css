@@ -1,0 +1,8 @@
+.chart-wrapper {
+  padding: var(--space-lg);
+}
+
+.chart-inner {
+  position: relative;
+  height: 320px;
+}
